@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: https://github.com/ge90toga/argocddemo.git
     targetRevision: HEAD
     path: dev
   destination: 
@@ -19,5 +19,5 @@ spec:
     - CreateNamespace=true
 
     automated:
-      selfHeal: true
-      prune: true
+      selfHeal: true # tracks repo changes and sync to cluster
+      prune: true # enable remover resources 
